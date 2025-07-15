@@ -1,0 +1,74 @@
+@media print {
+    body {
+        background-color: #ffffff !important;
+        font-family: 'Inter', sans-serif;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    /* Hide the main interactive application content */
+    .non-printable-content {
+        display: none !important;
+    }
+    
+    /* General styles for the printable view */
+    .print-page-container {
+        page-break-after: always;
+        page-break-inside: avoid;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    
+    .print-page-container:last-child {
+        page-break-after: auto;
+    }
+
+    /* Remove shadows and rounded corners for a flatter look */
+    div[class*="shadow-"], button[class*="shadow-"] {
+        box-shadow: none !important;
+    }
+    
+    div[class*="rounded-"], button[class*="rounded-"] {
+        border-radius: 2px !important;
+    }
+
+    .cursor-grab {
+        cursor: default !important;
+    }
+
+    /* Style the components inside the print view */
+    .p-4, .p-6, .md\\:p-6 {
+        padding: 6px !important;
+    }
+
+    .bg-white {
+        border: 1px solid #e2e8f0 !important;
+    }
+
+    .grid {
+        gap: 2px !important;
+    }
+    
+    .aspect-\\[5\\/6\\] {
+        aspect-ratio: auto;
+        min-height: 80px;
+    }
+
+    /* Ensure background colors for seats are printed */
+    .bg-sky-50 { background-color: #f0f9ff !important; border-color: #bae6fd !important; }
+    .bg-slate-200\/70 { background-color: #f1f5f9 !important; border-color: #cbd5e1 !important; }
+    .bg-emerald-50 { background-color: #ecfdf5 !important; border-color: #6ee7b7 !important; }
+    .bg-amber-50 { background-color: #fffbeb !important; border-color: #fcd34d !important; }
+
+    /* Style the bus roster for print */
+    .bus-roster-item {
+        page-break-inside: avoid;
+        background-color: #f8fafc !important;
+        border: 1px solid #e2e8f0 !important;
+    }
+
+    /* Hide elements within components that aren't needed for print */
+    button[aria-label^="Upload photo"] {
+        display: none !important;
+    }
+}

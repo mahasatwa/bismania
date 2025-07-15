@@ -1,0 +1,6 @@
+{
+  "name": "Bus Seat Management AI",
+  "description": "An interactive web application to help event coordinators manage bus seating arrangements. This version introduces a collaborative workflow with request tracking. Users can propose changes, which are logged and can be approved by an administrator. The application maintains a history of all requests and approvals.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}
